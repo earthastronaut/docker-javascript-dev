@@ -6,7 +6,7 @@
 # Shell for makefile commands
 SHELL=/bin/bash
 
-export IMAGE?=node-dev
+export IMAGE?=earthastronaut/node-dev
 
 # Git tag info used for versioning
 export TAG=$(shell git describe --tags)

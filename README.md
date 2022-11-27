@@ -5,9 +5,9 @@ This image is developed for doing javascript related dev work within a container
 ## Features
 
 * Javascript
-* git
-* vscode ready
-* zsh + oh-my-zsh
+* Git
+* Vscode ready
+* Zsh + Oh-My-Zsh
 
 ## Getting Started
 

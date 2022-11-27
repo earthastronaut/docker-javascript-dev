@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
   dev:
-    image: node-dev:latest
+    image: earthastronaut/node-dev:latest
     ports:
       - 8000:8000
     command: npm run develop
