@@ -1,0 +1,55 @@
+# ------------------------------------------------------------------- #
+# Optional dev overwrite
+# ------------------------------------------------------------------- #
+
+if ! [[ -z $ZSHRC_OVERWRITE ]] && [[ -f $ZSHRC_OVERWRITE ]]
+then
+    source $ZSHRC_OVERWRITE
+    exit 0
+fi
+
+# ------------------------------------------------------------------- #
+# oh-my-zsh
+# ------------------------------------------------------------------- #
+
+# ZSH must be set. Likely /home/tron/.oh-my-zsh
+# ZSH_PLUGINS=git,git-flow,... can be set if you want plugins
+plugins_env_str="${ZSH_PLUGINS}"
+plugins=(${(@s:,:)plugins_env_str})
+
+# ------------------------------------------------------------------- #
+# aliases
+# ------------------------------------------------------------------- #
+
+# system
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='/bin/rm -i'
+alias lsl='ls -haltr'  # -halter  the `-e` is part of the `-l`
+
+# git
+alias grr='git reset HEAD~1'
+alias gus='git reset HEAD'
+alias wip='git commit -am "WIP"'
+
+# python
+alias py="python"
+alias ipy="ipython"
+
+# misc
+alias sl="ls | rev"
+
+# ------------------------------------------------------------------- #
+# Optional dev additions
+# ------------------------------------------------------------------- #
+
+if ! [[ -z $ZSHRC_EXTRA ]] && [[ -f $ZSHRC_EXTRA ]]
+then
+    source $ZSHRC_EXTRA
+fi
+
+# ------------------------------------------------------------------- #
+# Oh-my-zsh
+# ------------------------------------------------------------------- #
+
+source ${ZSH}/oh-my-zsh.sh
