@@ -9,8 +9,9 @@ This image is developed for doing javascript related dev work within a container
 * vscode ready
 * zsh + oh-my-zsh
 
-
 ## Getting Started
+
+Can copy the `docker-compose.yml` file and use it to run particular projects.
 
 
 
