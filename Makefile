@@ -32,8 +32,9 @@ buildx:
 ## Push images
 publish: build
 	docker login
-	docker push ${IMAGE}
+	docker tag ${IMAGE} ${IMAGE}:${TAG}
 	docker push ${IMAGE}:${TAG}
+	docker push ${IMAGE}
 
 # Clean up build.
 clean:
